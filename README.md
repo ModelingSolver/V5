@@ -62,4 +62,4 @@ Score : `S = (β × ΔC) / λ`
 
 ---
 
-*ZORAN 🦋 · INSTITUT IA · v5.1*
+*ZORAN 🦋 · INSTITUT IA · v5.7*
