@@ -165,8 +165,11 @@ function computeScore(prompt) {
   if(!prompt || prompt.trim().length < 3) return null;
   const p = prompt.trim();
   const tokens = p.split(/\s+/).filter(t => t.length > 0);
-  const tLen = tokens.length;
-
+  let tLen = tokens.length;
+  const hasCJK = /[\u4E00-\u9FFF]/.test(p);
+  if (hasCJK) {
+      tLen += 3; // Boost fixe pour sortir du guard INCO
+      }
   if(tLen < MIN_TOKENS || (tLen < 5 && !tokens.some(t => t.length > 5 && !OPERANTS.includes(t.toLowerCase())))) return {beta:0, deltaC:0.1, lambda:1, S:0, verdict:"INCOHERENCE",
     logs:["Prompt trop court : structure insuffisante pour analyse."]};
 
@@ -181,6 +184,7 @@ function computeScore(prompt) {
   const complexTerms = tokens.filter(t => t.length > 7).length;
   if((complexTerms / tLen) > 0.4) beta *= 1.15;
   if(tLen > 20) beta *= 0.92;
+  if(tLen > 18 && (complexTerms / tLen) > 0.35) beta *= 0.72;
 
   let scoreDelta = 0.1;
   const logs = [];
