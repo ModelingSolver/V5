@@ -58,9 +58,9 @@ Total
 48 [DISCRIM] Quels sont les impacts de la décentralisation… 🟠 ADMISS. 🟠 ADMISS. ✅
 49 [DISCRIM] Analyse en tableau markdown les 5 vecteurs d'… 🟢 OPTIMAL 🟢 OPTIMAL ✅
 50 [DISCRIM] Donne 🔴 INCO. 🔴 INCO. ✅
-ZORAN🦋 · Offline · Tenseurs locaux actifs · INSTITUT IA
+V5 · Offline · Tenseurs locaux actifs · INSTITUT IA
 
-Résumé des modifications — ZORAN v5 → v5.2
+Résumé des modifications — v5 → v5.2
 
 Modifications effectuées
 LigneQuoiAvant → Après147Seuil OPTIMAL2.5 → 2.3148Seuil ADMISSIBLE1.2 → 1.0162Guard court + opérant sans objettLen < 4 → tLen < 4 OR (tLen < 5 AND pas d'objet substantiel)167pl monté avant betadéclaration déplacée168Pénalité SÉCUbeta *= 0.55 sur termes dangereux190Bonus longueur densedeltaC *= 1.1 si 8 ≤ tLen ≤ 25190const → let pour deltaCpermet la réassignation
@@ -81,7 +81,7 @@ La formule S = (β × ΔC) / λ reste inchangée — seuls les paramètres d'ent
 
 
 
-ZORAN v5 → v5.3 — Rapport d'optimisation
+v5 → v5.3 — Rapport d'optimisation
 
 Résultats
 
