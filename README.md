@@ -47,7 +47,7 @@ Score : `S = (β × ΔC) / λ`
 
 ```html
 <iframe 
-  src="https://modelingsolver.github.io/ZORANV5/" 
+  src="https://modelingsolver.github.io/V5/" 
   width="100%" 
   height="850px" 
   style="border:none; border-radius:16px;">
